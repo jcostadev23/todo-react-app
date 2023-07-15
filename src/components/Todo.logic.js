@@ -40,24 +40,29 @@ export default function Todos ({listTodos, setListTodos}) {
     }
   
     return (
-        <div className="flex mt-4">
-            <Input 
-                type="text" 
-                placeholder='Add Task'
-                value={task}
-                onChange={InputField}/>
-            <Checkbox
-                type="checkbox"
-                value='true'
-                checked={priority}
-                onChange={checkPriority}
-                label='Priority'/>
+        <form>
+            <div className="flex mt-4">
+                <Input
+                    type="text" 
+                    placeholder='Add Task'
+                    value={task}
+                    onChange={InputField}/>
+            </div>
+            
+            <div className="flex mt-2">
+                <Checkbox
+                    type="checkbox"
+                    value='true'
+                    checked={priority}
+                    onChange={checkPriority}
+                    label='Priority'/>
+            </div>
             <Button  
                 type='submit'
                 onClick={CreateTodo}>
-                Submit
-            </Button>
-        </div>             
+                Add Task
+            </Button> 
+        </form>           
     )
 }
 
