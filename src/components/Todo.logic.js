@@ -8,7 +8,7 @@ export default function Todos ({listTodos, setListTodos}) {
     const [task, setTask] = useState('');
     const [priority, setPriority] = useState(false);
 
-    const CreateTodo = (event)=> {
+    const createTodo = (event)=> {
         if(!task){
             event.preventDefault()
             return
@@ -35,7 +35,7 @@ export default function Todos ({listTodos, setListTodos}) {
             setPriority(!priority)
         }
 
-    const InputField = (event)=> {
+    const inputField = (event)=> {
         setTask(event.target.value)
     }
   
@@ -46,9 +46,8 @@ export default function Todos ({listTodos, setListTodos}) {
                     type="text" 
                     placeholder='Add Task'
                     value={task}
-                    onChange={InputField}/>
+                    onChange={inputField}/>
             </div>
-            
             <div className="flex mt-2">
                 <Checkbox
                     type="checkbox"
@@ -57,9 +56,9 @@ export default function Todos ({listTodos, setListTodos}) {
                     onChange={checkPriority}
                     label='Priority'/>
             </div>
-            <Button  
+            <Button 
                 type='submit'
-                onClick={CreateTodo}>
+                onClick={createTodo}>
                 Add Task
             </Button> 
         </form>           

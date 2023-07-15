@@ -20,7 +20,7 @@ export function Checkbox(props){
     if (!label) {
         return (
           <input
-            className="ml-2 mr-2 rounded hover:bg-gray-100 border-gray"
+            className="mr-2 rounded hover:bg-gray-100 border-gray"
             type={type}
             value={value}
             checked={checked}

@@ -17,19 +17,17 @@ export default function ListTodos () {
     return (
         <div className="h-100 w-full flex items-center p-2 justify-center bg-teal-lightest font-sans">
             <div className="bg-white rounded shadow p-4 w-full lg:w-3/4 lg:max-w-lg">
-                <div className="mb-4">
-                    <h1 className="text-grey-darkest text-xl">To-Do List</h1>  
-                    <Todos 
-                        listTodos={listTodos} 
-                        setListTodos={setListTodos}
-                        />
-                </div>
+                <h1 className="text-grey-darkest text-xl">To-Do List</h1>  
+                <Todos 
+                    listTodos={listTodos} 
+                    setListTodos={setListTodos}
+                    />
                 <div className="flex mb-4 items-center">
                     <div className='w-full'> 
                         {listTodos && listTodos.map((todo, index) => {
                            const isChecked = selectedTodos.includes(todo.id)
                            return (
-                                <div className='flex mt-4 mr-2 px-2 w-full' key={index}>
+                                <div className='flex mt-2 w-full' key={index}>
                                     <Checkbox
                                         type="checkbox"
                                         value='true'
