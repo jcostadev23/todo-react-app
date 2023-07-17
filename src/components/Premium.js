@@ -1,6 +1,6 @@
 import { Authenticator } from "@aws-amplify/ui-react";
 import '@aws-amplify/ui-react/styles.css';
-import { Button } from "./components/Button";
+import { Button } from "./Button";
 const Premium = ()=> {
     return (
         <Authenticator>
