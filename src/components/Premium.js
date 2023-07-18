@@ -9,6 +9,7 @@ const Premium = ()=> {
                     <div className="bg-white rounded shadow p-4 w-full lg:w-3/4 lg:max-w-lg">
                         <h1>Welcome to premium</h1>
                         <p>This is a test of authentication</p>
+                        <p>testing if it works</p>
                         <Button onClick={signOut}>SignOut</Button>
                     </div>
                 </div>  

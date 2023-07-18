@@ -11,6 +11,7 @@ function App() {
         <div className="bg-white justify-between rounded shadow p-4 w-full lg:w-3/4 lg:max-w-lg">
           <NavLink activeclassname='active' to='/'>Home </NavLink>
           <NavLink activeclassname='active' to='../premium'>Premium</NavLink>
+          <NavLink activeclassname='active' to='../premium'>Premium test</NavLink>
         </div>
         <Routes>
           <Route path='/' element={<ListTodos/>}></Route>
