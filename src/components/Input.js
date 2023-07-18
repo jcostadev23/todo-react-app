@@ -3,8 +3,9 @@ import * as React from "react";
 export function Input(props) {
   const { placeholder, onChange, value, type } = props;
   return (
-        <input className='shadow rounded-full w-full px-3 
-                focus:outline-none focus:ring-2 focus:ring-gray-900'
+        <input className='shadow rounded-lg w-full px-4
+                focus:outline-none focus:ring-2 focus:ring-gray-500
+                text-sm block p-2.5'
         type={type}        
         onChange={onChange}
         value={value}
@@ -19,7 +20,7 @@ export function Checkbox(props){
     if (!label) {
         return (
           <input
-            className="ml-2 mr-2 rounded hover:bg-gray-100 border-gray"
+            className="mr-2 rounded hover:bg-gray-100 border-gray"
             type={type}
             value={value}
             checked={checked}
