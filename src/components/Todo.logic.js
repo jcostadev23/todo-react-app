@@ -56,7 +56,7 @@ export default function Todos ({listTodos, setListTodos, premium}) {
     }
   
     return (
-        <form>
+        <form className='mb-8'>
             <div className="flex mt-4">
                 <Input
                     type="text" 

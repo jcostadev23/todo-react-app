@@ -8,9 +8,9 @@ function App() {
   return (
     <div>
       <Router>
-        <div className="bg-white justify-between rounded shadow p-4 w-full lg:w-3/4 lg:max-w-lg">
-          <NavLink activeclassname='active' to='/'>Home </NavLink>
-          <NavLink activeclassname='active' to='../premium'>Premium</NavLink>
+        <div className="nav-container bg-white rounded shadow p-4 ">
+          <NavLink activeclassname='active' to='/' exact>Home </NavLink>
+          <NavLink activeclassname='active' to='../premium' exact>Premium</NavLink>
         </div>
         <Routes>
           <Route path='/' element={<ListTodos/>}></Route>
