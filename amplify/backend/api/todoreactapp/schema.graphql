@@ -4,4 +4,4 @@ type Todo @model @auth(rules: [{allow: public}]) {
   priority: Boolean
   done: Boolean
   date: AWSDate
-}
+} 

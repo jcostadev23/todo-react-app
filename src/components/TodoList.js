@@ -11,6 +11,7 @@ import { handleComplete,
 export default function ListTodos () {
     const [listTodos, setListTodos] = useState(JSON.parse(localStorage.getItem(('listTodos') || '[]')));
     const [selectedTodos, setSelectedTodos] = useState([]);
+    const [premium, setPremium] = useState(true)
 
    listTodos && listTodos.sort((a, b)=> a.done - b.done || b.priority - a.priority)
 
@@ -21,6 +22,7 @@ export default function ListTodos () {
                 <Todos 
                     listTodos={listTodos} 
                     setListTodos={setListTodos}
+                    premium={premium}
                     />
                 <div className="flex mb-4 items-center">
                     <div className='w-full'> 
