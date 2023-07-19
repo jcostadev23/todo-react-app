@@ -1,0 +1,10 @@
+{
+  "resourceName": "jcostadev23todoapp",
+  "tableName": "jcostadev23todoapp",
+  "partitionKey": {
+    "fieldName": "todos",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

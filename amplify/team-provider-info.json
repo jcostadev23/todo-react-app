@@ -20,6 +20,12 @@
           "appId": "dq3q1zull1z0a",
           "type": "cicd"
         }
+      },
+      "api": {
+        "todoreactapp": {}
+      },
+      "storage": {
+        "jcostadev23todoapp": {}
       }
     }
   }
