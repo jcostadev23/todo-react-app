@@ -19,7 +19,6 @@ export default function Todos ({listTodos, setListTodos, premium}) {
             return
         }
         if(!premium){ 
-            console.log('dentro do if')
             await DataStore.save(
                 new Todo({
                     "task": task,
@@ -36,7 +35,7 @@ export default function Todos ({listTodos, setListTodos, premium}) {
             priority: priority,
             done: false,
         }
-
+       
         addTodo(todo)
         setPriority(false)
         setTask('')

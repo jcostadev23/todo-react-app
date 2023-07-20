@@ -9,8 +9,8 @@ function App() {
     <div>
       <Router>
         <div className="nav-container bg-white rounded shadow p-4 ">
-          <NavLink activeclassname='active' to='/' exact>Home </NavLink>
-          <NavLink activeclassname='active' to='../premium' exact>Premium</NavLink>
+          <NavLink activeclassname='active' to='/' exact='true'>Home </NavLink>
+          <NavLink activeclassname='active' to='../premium' exact='true'>Premium</NavLink>
         </div>
         <Routes>
           <Route path='/' element={<ListTodos/>}></Route>
