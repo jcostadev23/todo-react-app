@@ -28,5 +28,36 @@
         "jcostadev23todoapp": {}
       }
     }
+  },
+  "master": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-todoreactapp-master-22239-authRole",
+      "UnauthRoleArn": "arn:aws:iam::053877708892:role/amplify-todoreactapp-master-22239-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::053877708892:role/amplify-todoreactapp-master-22239-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-todoreactapp-master-22239-deployment",
+      "UnauthRoleName": "amplify-todoreactapp-master-22239-unauthRole",
+      "StackName": "amplify-todoreactapp-master-22239",
+      "StackId": "arn:aws:cloudformation:eu-west-2:053877708892:stack/amplify-todoreactapp-master-22239/79bb1140-28f7-11ee-9242-0a9f59aa71f6",
+      "AmplifyAppId": "dq3q1zull1z0a"
+    },
+    "categories": {
+      "auth": {
+        "todoreactapp8c468fe8": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "dq3q1zull1z0a",
+          "type": "cicd"
+        }
+      },
+      "api": {
+        "todoreactapp": {}
+      },
+      "storage": {
+        "jcostadev23todoapp": {},
+        "mytodo": {}
+      }
+    }
   }
 }
