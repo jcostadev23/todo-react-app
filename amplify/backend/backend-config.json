@@ -81,6 +81,10 @@
     "mytodo": {
       "providerPlugin": "awscloudformation",
       "service": "DynamoDB"
+    },
+    "todosStorage": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
     }
   }
 }

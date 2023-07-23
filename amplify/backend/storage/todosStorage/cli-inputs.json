@@ -1,0 +1,10 @@
+{
+  "resourceName": "todosStorage",
+  "tableName": "todosStorage",
+  "partitionKey": {
+    "fieldName": "todos",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
