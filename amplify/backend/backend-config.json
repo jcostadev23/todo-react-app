@@ -77,6 +77,10 @@
     "jcostadev23todoapp": {
       "providerPlugin": "awscloudformation",
       "service": "DynamoDB"
+    },
+    "mytodo": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
     }
   }
 }

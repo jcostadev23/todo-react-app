@@ -1,0 +1,10 @@
+{
+  "resourceName": "mytodo",
+  "tableName": "mytodoreact",
+  "partitionKey": {
+    "fieldName": "todos",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
