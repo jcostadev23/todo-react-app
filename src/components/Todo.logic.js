@@ -1,34 +1,20 @@
 import React from 'react';
-import { DataStore } from '@aws-amplify/datastore';
-import { Todo } from '../models';
 import { useState } from 'react';
 import { createId } from '../tools/createId';
 import { Button } from './Button';
-import {Checkbox, Input} from './Input';
+import { Checkbox, Input } from './Input';
 
-export default function Todos ({listTodos, setListTodos, premium}) {
+export default function Todos ({listTodos, setListTodos, }) {
     const [task, setTask] = useState('');
     const [priority, setPriority] = useState(false);
    
     async function createTodo (event) {
-        const date = new Date();
-        const dateToString = date.toISOString().slice(0, 10);
         
         if(!task){
             event.preventDefault()
             return
         }
-        if(!premium){ 
-            await DataStore.save(
-                new Todo({
-                    "task": task,
-                    "priority": priority,
-                    "done": false,
-                    "date": dateToString
-                })
-            );
-        }
-    
+ 
         const todo = {   
             id: createId(),
             task: task.charAt(0).toUpperCase()+ task.slice(1),
@@ -40,6 +26,7 @@ export default function Todos ({listTodos, setListTodos, premium}) {
         setPriority(false)
         setTask('')
     }
+
     const addTodo = (todo)=>{
         const newListTodos = listTodos ? [...listTodos, todo] : [todo]
         setListTodos(newListTodos)
