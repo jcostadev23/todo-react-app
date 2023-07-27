@@ -3,10 +3,12 @@ import { Todo } from '../models';
 
 export async function fetchTodos (id) {
     if(!id){
+        console.log('fetchTodos')
         return await DataStore.query(Todo)
-    }
+    };
+    console.log('fetchTodos2 return ')
     return await DataStore.query(Todo, id)
-}
+};
 
 export async function deleteTodo (id) {
     try{

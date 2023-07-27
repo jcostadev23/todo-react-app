@@ -27,7 +27,7 @@ export default function ListTodos () {
                         {listTodos && listTodos.map((todo, index) => {
                            const isChecked = selectedTodos.includes(todo.id)
                            return (
-                                <div className='flex mt-2 w-full' key={index}>
+                                <div className='flex mt-2 w-full' key={index} >
                                     <Checkbox
                                         type="checkbox"
                                         value='true'

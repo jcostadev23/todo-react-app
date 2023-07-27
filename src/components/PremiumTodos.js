@@ -17,14 +17,14 @@ export function PremiumTodos (){
          .then(todosFromDB => {
             setListTodos(todosFromDB);
          })
-      }, [listTodos]);
+      }, []);
 
     listTodos && listTodos.sort((a, b)=> a.done - b.done || b.priority - a.priority)
 
     return (
         <div className="flex justify-center ">
             <Card variation="elevated">
-                <Heading level={3} color="gray" fontWeight="bold">Premium</Heading> 
+                <Heading level={3} color="gray" justifyContent="center" fontWeight="bold">Premium</Heading> 
                 {newTodo && (
                     <TodoCreateForm
                         onSuccess={(()=>(setNewTodo(null)))}/>

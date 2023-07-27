@@ -15,7 +15,7 @@ export function Input(props) {
 }
 
 export function Checkbox(props){
-    const {type, value, checked, onChange, label} = props;
+    const {type, value, checked, onChange, label, index} = props;
     
     if (!label) {
         return (
@@ -25,6 +25,7 @@ export function Checkbox(props){
             value={value}
             checked={checked}
             onChange={onChange}
+            data-testid={`checkbox-${index}`}
           />
         );
       }
