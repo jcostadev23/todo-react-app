@@ -22,6 +22,12 @@
         "jcostadev23todoapp": {},
         "mytodo": {},
         "todosStorage": {}
+      },
+      "api": {
+        "todoreactapp": {}
+      },
+      "auth": {
+        "todoreactapp584ca6d2": {}
       }
     }
   }
