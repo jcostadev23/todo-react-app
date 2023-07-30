@@ -3,8 +3,10 @@ import { useState } from 'react';
 import { createId } from '../tools/createId';
 import { Button } from './Button';
 import { Checkbox, Input } from './Input';
+import { DataStore } from "aws-amplify";
+import { Todo } from '../models/index'
 
-export default function Todos ({listTodos, setListTodos, }) {
+export default function Todos () {
     const [task, setTask] = useState('');
     const [priority, setPriority] = useState(false);
    
@@ -22,17 +24,11 @@ export default function Todos ({listTodos, setListTodos, }) {
             done: false,
         }
        
-        addTodo(todo)
+        await DataStore.save(new Todo(todo))
         setPriority(false)
         setTask('')
     }
 
-    const addTodo = (todo)=>{
-        const newListTodos = listTodos ? [...listTodos, todo] : [todo]
-        setListTodos(newListTodos)
-        localStorage.setItem('listTodos', JSON.stringify(newListTodos))
-    }
-    
     const checkPriority = ()=>{
             setPriority(!priority)
         }
@@ -49,14 +45,13 @@ export default function Todos ({listTodos, setListTodos, }) {
                     placeholder='Add Task'
                     value={task}
                     onChange={inputField}/>
-            </div>
-            <div className="flex mt-2">
+            
                 <Checkbox
                     type="checkbox"
                     value='true'
                     checked={priority}
                     onChange={checkPriority}
-                    label='Priority'/>
+                    />
             </div>
             <Button 
                 type='submit'

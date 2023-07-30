@@ -11,48 +11,33 @@ export function checkBox ({index, listTodos, selectedTodos, setSelectedTodos}) {
     setSelectedTodos(selectedTodo)
 };
 
-export function handleComplete ({selectedTodos, listTodos, setListTodos, setSelectedTodos}) {
-    const newListTodos = listTodos.map(todo => {
-        if(selectedTodos.includes(todo.id)){
-            setSelectedTodos([])
-            return {...todo, done: true}
-        }
-        return todo
-    });
-     
-    localStorageUpdate(newListTodos, setListTodos)
-};
+export function handleTodo (todo, done){ 
+    const newTodo = {...todo, done: !done}
+    console.log('handleTodo', newTodo)
+    return newTodo
+}
 
-export function handleIncomplete ({selectedTodos, listTodos, setListTodos, setSelectedTodos}) {
+export function handleIncomplete ({selectedTodos, listTodos,}) {
     const newListTodos = listTodos.map(todo => {
         if(selectedTodos.includes(todo.id)){
-            setSelectedTodos([])
             return {...todo, done: false}
         }
         return todo
     });
 
-    localStorageUpdate(newListTodos, setListTodos)
+   
 };
 
-export function deleteTodo ({selectedTodos, listTodos, setListTodos}) {
+export function deleteTodo ({selectedTodos, listTodos}) {
     if(!selectedTodos || selectedTodos.length === 0) return;
 
     const newList = listTodos.findIndex(element=> element.id === selectedTodos[0])
         if(newList !== -1){
             listTodos.splice(newList, 1)
-            localStorageUpdate(listTodos, setListTodos)
+            
         }   
-    setListTodos(JSON.parse(localStorage.getItem(('listTodos') || '[]')))        
+       
 };
 
-export function clearStorage (setListTodos){
-    localStorage.clear()
-        setListTodos([])
-}
 
-function localStorageUpdate(newListTodos, setListTodos) {
-    localStorage.setItem('listTodos', JSON.stringify(newListTodos))
-    setListTodos(newListTodos)
-  }
   

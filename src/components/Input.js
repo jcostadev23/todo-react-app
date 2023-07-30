@@ -15,31 +15,16 @@ export function Input(props) {
 }
 
 export function Checkbox(props){
-    const {type, value, checked, onChange, label, index} = props;
-    
-    if (!label) {
+    const {type, value, checked, onChange} = props;
+  
         return (
-          <input
-            className="mr-2 rounded hover:bg-gray-100 border-gray"
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6"
             type={type}
             value={value}
             checked={checked}
-            onChange={onChange}
-            data-testid={`checkbox-${index}`}
-          />
+            onChange={onChange}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+          </svg>
         );
       }
-    
-    return (
-        <label className="md:w-1/3 block font-medium text-center text-sm text-gray-900 py-2.5">
-            <input className="ml-2 mr-2 rounded hover:bg-gray-100 border-gray" 
-                type={type}
-                value={value}
-                checked={checked}
-                onChange={onChange}/>
-            <span className="text-sm">
-                {label}
-            </span>
-        </label>
-    )
-}
+  
