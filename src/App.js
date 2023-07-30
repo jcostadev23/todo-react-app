@@ -9,7 +9,7 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route path='/premium' element={<Premium/>}/>
+          <Route path='/' element={<Premium/>}/>
         </Routes> 
       </Router>   
     </div>  
