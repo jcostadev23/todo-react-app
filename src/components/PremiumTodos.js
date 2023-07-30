@@ -31,8 +31,8 @@ export function PremiumTodos (){
                         color="var(--amplify-colors-red-60)"
                         >Priority</div> : ""}<div> Date: {new Date(todo.date).toLocaleDateString()} {/* Format Date to "MM/DD/YYYY" */}</div>
                         <ButtonGroup justifyContent='center'>
-                            <ButtonDone onClick={(()=> (handleTodo(todo ,todo.done)))}/>
-                            <ButtonInformation onClick={()=>(deleteTodo(todo.id))}/>
+                            <ButtonDone onClick={()=> handleTodo(todo ,todo.done)}/>
+                            <ButtonInformation onClick={()=> deleteTodo(todo.id)}/>
                         </ButtonGroup>
                     </div> 
                 ))}

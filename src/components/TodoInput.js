@@ -1,8 +1,7 @@
-import React from 'react';
-import { useState } from 'react';
-import { createId } from '../tools/createId';
-import { Button } from './Button';
-import { Checkbox, Input } from './Input';
+import React, { useState } from 'react';
+import { createId, awsDateFormat } from '../tools/createId';
+import { Button, ButtonInformation } from './Button';
+import { Input } from './Input';
 import { DataStore } from "aws-amplify";
 import { Todo } from '../models/index'
 
@@ -22,6 +21,7 @@ export default function Todos () {
             task: task.charAt(0).toUpperCase()+ task.slice(1),
             priority: priority,
             done: false,
+            date: awsDateFormat
         }
        
         await DataStore.save(new Todo(todo))
@@ -46,12 +46,7 @@ export default function Todos () {
                     value={task}
                     onChange={inputField}/>
             
-                <Checkbox
-                    type="checkbox"
-                    value='true'
-                    checked={priority}
-                    onChange={checkPriority}
-                    />
+                <ButtonInformation onClick={()=> checkPriority()}/>
             </div>
             <Button 
                 type='submit'
