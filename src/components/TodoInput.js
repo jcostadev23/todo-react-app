@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { createId, awsDateFormat } from '../tools/createId';
-import { Button, ButtonInformation } from './Button';
+import { createId, awsDateFormat } from '../helpers/createId';
+import { Button, ButtonPriority } from './Button';
 import { Input } from './Input';
 import { DataStore } from "aws-amplify";
 import { Todo } from '../models/index'
@@ -46,13 +46,12 @@ export default function Todos () {
                     value={task}
                     onChange={inputField}/>
             
-                <ButtonInformation onClick={()=> checkPriority()}/>
+                <ButtonPriority onClick={()=> checkPriority()}/>
             </div>
             <Button 
-                type='submit'
-                onClick={createTodo}>
-                Add Task
-            </Button> 
+                label='Add'
+                type='Submit'
+                onClick={createTodo}/>
         </form>           
     )
 }

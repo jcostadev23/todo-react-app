@@ -1,7 +1,7 @@
-import { Authenticator} from "@aws-amplify/ui-react";
+import { Authenticator } from "@aws-amplify/ui-react";
 import '@aws-amplify/ui-react/styles.css';
 import { Button } from "./Button";
-import {PremiumTodos} from "./PremiumTodos";
+import { PremiumTodos } from "./PremiumTodos";
 import { DataStore } from "aws-amplify";
 
 const Premium = ()=> {
@@ -10,11 +10,12 @@ const Premium = ()=> {
             {({signOut})=> (
                 <div className="h-100 w-full flex items-center p-2 justify-center bg-teal-lightest font-sans">
                     <div className="bg-white rounded shadow p-4 w-full lg:w-3/4 lg:max-w-lg">
-                       <PremiumTodos/>
+                        <PremiumTodos/>
                         <Button onClick={()=>{
                             DataStore.clear()
                             signOut()
-                        }}>SignOut</Button>
+                            }}
+                            label='SignOut'/>
                     </div>
                 </div>  
             )}
