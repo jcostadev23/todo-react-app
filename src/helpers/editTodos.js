@@ -26,7 +26,7 @@ function todoNotDone (listTodos){
 
 function sortTodos(listTodos){
     const list = [...listTodos]
-    list.sort((a, b)=> a.done - b.done || b.priority - a.priority)
+    list.sort((a, b)=> b.priority - a.priority)
     return list
 }
 

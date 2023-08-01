@@ -21,7 +21,10 @@ export function PremiumTodos (){
                 <div className='text-4xl md:text-5xl lg:text-6xl text-center font-extrabold text-transparent bg-clip-text 
                     bg-gradient-to-r to-emerald-300 from-emerald-200'>Todoco</div>
                 <TodosInput listTodos={listTodos}/>
-                <Todos listTodos={sortTodos(listTodos)}/>
+                <Todos listTodos={sortTodos(listTodos.filter((todo)=> !todo.done ))}/>
+                <div className='text-2xl md:text-3xl lg:text-4xl text-center font-extrabold text-transparent bg-clip-text 
+                    bg-gradient-to-r to-emerald-300 from-emerald-200'>Todos Done</div>
+                <Todos listTodos={listTodos.filter((todo)=> todo.done)}/>
             </div>  
         </div>
     )
