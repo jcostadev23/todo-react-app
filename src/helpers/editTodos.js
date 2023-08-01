@@ -1,12 +1,16 @@
+import { DataStore } from "aws-amplify";
+import { Todo } from "../models";
 
 function handleTodo (todo, done){ 
     const newTodo = {...todo, done: !done}
     return newTodo
 }
 
-function deleteTodo (id, listTodos) {
-    const newList = listTodos.filter(element => element.id !== id);
-    return newList   
+async function deleteTodo (id) {
+    const toDelete = await DataStore.query(Todo, id);
+        if (toDelete) {
+            DataStore.delete(toDelete);
+        }
 }
 
 function todoNotDone (listTodos){
@@ -19,18 +23,5 @@ function sortTodos(listTodos){
     list.sort((a, b)=> a.done - b.done || b.priority - a.priority)
     return list
 }
-
-
-// export async function deleteTodo (id) {
-//     try{
-//         const deleteTodo = await fetchTodos(id)
-//         await DataStore.delete(deleteTodo);
-//             return true
-
-//     } catch (error) {
-//         console.log("error to Delete", error)
-//         return false
-//     }
-// }
 
 export { handleTodo, deleteTodo, todoNotDone, sortTodos }

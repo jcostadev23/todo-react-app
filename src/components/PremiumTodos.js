@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { sortTodos } from '../helpers/editTodos';
-import TodosInput from './TodoInput';
+import { TodosInput }  from './TodoInput';
 import { Todos } from './Todo';
 import { DataStore } from 'aws-amplify';
 import { Todo } from '../models';
@@ -14,7 +14,7 @@ export function PremiumTodos (){
           });
 
     },[]);
-
+   
     return (
         <div className="flex justify-center ">
             <div>

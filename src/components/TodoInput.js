@@ -5,15 +5,15 @@ import { Input } from './Input';
 import { DataStore } from "aws-amplify";
 import { Todo } from '../models/index'
 
-export default function Todos () {
+export function TodosInput () {
     const [task, setTask] = useState('');
     const [priority, setPriority] = useState(false);
    
     async function createTodo (event) {
+        event.preventDefault()
         
         if(!task){
-            event.preventDefault()
-            return
+            return 
         }
  
         const todo = {   
@@ -27,6 +27,7 @@ export default function Todos () {
         await DataStore.save(new Todo(todo))
         setPriority(false)
         setTask('')
+        
     }
 
     const checkPriority = ()=>{

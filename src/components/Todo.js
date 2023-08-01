@@ -15,7 +15,7 @@ export function Todos ({listTodos}){
                      <div className='flex w-full text-gray-500'> 
                      Date: {new Date(todo.date).toLocaleDateString()} {/* Format Date to "MM/DD/YYYY" */}
                     </div>  
-                    <ButtonDelete onClick={()=> deleteTodo(todo.id, list)}/>  
+                    <ButtonDelete onClick={()=> deleteTodo(todo.id)}/>  
                     </div> 
                 ))}
             </div>
