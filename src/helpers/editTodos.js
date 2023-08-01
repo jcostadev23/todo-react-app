@@ -1,9 +1,15 @@
 import { DataStore } from "aws-amplify";
 import { Todo } from "../models";
 
-function handleTodo (todo, done){ 
-    const newTodo = {...todo, done: !done}
-    return newTodo
+async function handleTodo (todo){ 
+    const updateTodo = await DataStore.query(Todo, todo.id);
+    if (updateTodo) {
+        await DataStore.save(
+            Todo.copyOf(updateTodo, update => {
+                update.done = !update.done;
+        })
+       )
+    }
 }
 
 async function deleteTodo (id) {

@@ -9,7 +9,7 @@ export function Todos ({listTodos}){
             {list.map((todo)=> (
                 <div className='text-gray-700' key={todo.id}>
                     <div className={todo.done ? 'flex w-full text-gray-400' : "flex w-full text-gray-500"}>
-                        <ButtonDone color={todo.done ? 'green' : 'currentColor'} onClick={(()=> handleTodo(todo ,todo.done))}/>
+                        <ButtonDone color={todo.done ? 'green' : 'currentColor'} onClick={(()=> handleTodo(todo))}/>
                         <ButtonPriority color={todo.priority ? 'orange' : 'currentColor'} onClick={(()=> console.log('it works'))}/>
                     Task: {todo.task}</div> 
                      <div className='flex w-full text-gray-500'> 
