@@ -9,8 +9,8 @@ export function Todo ({listTodos}){
             {list.map((todo)=> (
                 <div className='text-gray-700' key={todo.id}>
                     <div className={todo.done ? 'flex w-full text-gray-400' : "flex w-full text-gray-500"}>
-                        <ButtonDone style={todo.done ? {color:'green'} : {color:'currentColor'}} onClick={(()=> handleTodo(todo ,todo.done))}/>
-                        <ButtonPriority style={todo.priority ? {color:'orange'} : {color:'currentColor'}} onClick={(()=> console.log('it works'))}/>
+                        <ButtonDone color={todo.done ? 'green' : 'currentColor'} onClick={(()=> handleTodo(todo ,todo.done))}/>
+                        <ButtonPriority color={todo.priority ? 'orange' : 'currentColor'} onClick={(()=> console.log('it works'))}/>
                     Task: {todo.task}</div> 
                      <div className='flex w-full text-gray-500'> 
                      Date: {new Date(todo.date).toLocaleDateString()} {/* Format Date to "MM/DD/YYYY" */}
