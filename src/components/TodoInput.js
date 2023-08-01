@@ -45,8 +45,7 @@ export default function Todos () {
                     placeholder='Add Task'
                     value={task}
                     onChange={inputField}/>
-            
-                <ButtonPriority onClick={()=> checkPriority()}/>
+                <ButtonPriority style={{color:'currentColor'}} onClick={()=> checkPriority()}/>
             </div>
             <Button 
                 label='Add'
