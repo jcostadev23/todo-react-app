@@ -15,15 +15,13 @@ export function PremiumTodos (){
 
     },[]);
 
-    listTodos && sortTodos(listTodos);
-      
     return (
         <div className="flex justify-center ">
             <div>
                 <div className='text-4xl md:text-5xl lg:text-6xl text-center font-extrabold text-transparent bg-clip-text 
                     bg-gradient-to-r to-emerald-300 from-emerald-200'>Todoco</div>
                 <TodosInput listTodos={listTodos}/>
-                <Todo listTodos={listTodos}/>
+                <Todo listTodos={sortTodos(listTodos)}/>
             </div>  
         </div>
     )
