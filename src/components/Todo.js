@@ -1,7 +1,7 @@
 import { ButtonDone, ButtonPriority, ButtonDelete } from './Button';
 import { handleTodo, deleteTodo} from '../helpers/editTodos';
 
-export function Todo ({listTodos}){
+export function Todos ({listTodos}){
     const list = [...listTodos]
 
     return(

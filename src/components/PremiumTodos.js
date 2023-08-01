@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { fetchTodos } from '../helpers/fetchTodos';
 import { sortTodos } from '../helpers/editTodos';
 import TodosInput from './TodoInput';
-import { Todo } from './Todo';
+import { Todos } from './Todo';
+import { DataStore } from 'aws-amplify';
+import { Todo } from '../models';
 
 export function PremiumTodos (){
     const [listTodos, setListTodos] = useState([]);
 
     useEffect(() => {
-        fetchTodos()
-            .then(todosFromDB => {
-                setListTodos(todosFromDB);
-            });
+        const subscription = DataStore.observeQuery(Todo).subscribe(msg => {
+            setListTodos(msg.items);
+          });
 
     },[]);
 
@@ -21,7 +21,7 @@ export function PremiumTodos (){
                 <div className='text-4xl md:text-5xl lg:text-6xl text-center font-extrabold text-transparent bg-clip-text 
                     bg-gradient-to-r to-emerald-300 from-emerald-200'>Todoco</div>
                 <TodosInput listTodos={listTodos}/>
-                <Todo listTodos={sortTodos(listTodos)}/>
+                <Todos listTodos={sortTodos(listTodos)}/>
             </div>  
         </div>
     )
