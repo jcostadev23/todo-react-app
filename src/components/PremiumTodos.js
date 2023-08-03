@@ -28,12 +28,11 @@ export function PremiumTodos (){
                     bg-gradient-to-r to-emerald-300 from-emerald-200'>Todoco</div>
                     <TodosInput listTodos={listTodos}/>
                     <Todos listTodos={sortTodos(listTodos.filter((todo)=> !todo.done ))}/>
-                <div> Completed ( {filterTodos(listTodos).length} ) 
-                    <ShowTodosDone d={showTodosDone ? "M3 4.5h14.25M3 9h9.75M3 13.5h5.25m5.25-.75L17.25 9m0 0L21 12.75M17.25 9v12" :
+                <div className='flex justify-center m-4'><span className='mr-4'> Completed ( {filterTodos(listTodos).length} ) </span>
+                    {filterTodos(listTodos).length !== 0 ? <ShowTodosDone d={showTodosDone ? "M3 4.5h14.25M3 9h9.75M3 13.5h5.25m5.25-.75L17.25 9m0 0L21 12.75M17.25 9v12" :
                         "M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0l-3.75-3.75M17.25 21L21 17.25"}
-                        onClick={displayTodosDone}/> </div>
-                    {showTodosDone && <Todos listTodos={filterTodos(listTodos)}/>}
-                    
+                        onClick={displayTodosDone}/> : ""} </div>
+                    {showTodosDone && <Todos listTodos={filterTodos(listTodos)}/>}    
             </div>  
         </div>
     )
