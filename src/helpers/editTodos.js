@@ -19,15 +19,14 @@ async function deleteTodo (id) {
         }
 }
 
-function todoNotDone (listTodos){
-    const todosNotDone = listTodos.filter(todo => !todo.done);
-    return todosNotDone
-}
-
 function sortTodos(listTodos){
     const list = [...listTodos]
     list.sort((a, b)=> b.priority - a.priority)
     return list
 }
 
-export { handleTodo, deleteTodo, todoNotDone, sortTodos }
+function filterTodos(listTodos){
+    return listTodos.filter((todo)=> todo.done )
+}
+
+export { handleTodo, deleteTodo, sortTodos, filterTodos }
