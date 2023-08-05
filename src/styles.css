@@ -1,3 +1,82 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+
+.card {
+    background-color: whitesmoke;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    gap:10px
+}
+
+.input {
+    flex-grow: 1;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    margin: 4px;
+    background-color: whitesmoke;
+  }
+
+.button {
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 8px 10px;
+    background-color:  #9ae6b4;
+  }
+  
+.button:hover {
+    background-color:  #68d391; 
+  }
+
+.button-add { 
+    border-radius: 50%;
+}
+  
+.header {
+    text-align:center ;
+    font-size: 30px;
+    color: rgb(155, 246, 144);  
+    font-weight: 700;
+}
+
+.todos {
+    margin: 8px;
+    padding: 8px;
+}
+
+.todo {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 6px;
+}
+
+.todo-done {
+    color: #cbd5e0;
+}
+
+.todo-notDone {
+    color: #a0aec0;
+}
+
+.date {
+    margin-left: 10px;
+}
+
+.icons {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+}
+
+.listTodos {
+    display: flex;
+    justify-content: center;
+    margin: 4px;
+}

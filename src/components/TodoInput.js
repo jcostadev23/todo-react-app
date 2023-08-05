@@ -3,7 +3,8 @@ import { createId, awsDateFormat } from '../helpers/createId';
 import { Button, ButtonPriority } from './Button';
 import { Input } from './Input';
 import { DataStore } from "aws-amplify";
-import { Todo } from '../models/index'
+import { Todo } from '../models/index';
+import '../styles.css';
 
 export function TodosInput () {
     const [task, setTask] = useState('');
@@ -39,22 +40,24 @@ export function TodosInput () {
     }
   
     return (
-        <form className='mb-8'>
-            <div className="flex mt-4">
-                <Input
-                    type="text" 
-                    placeholder='Add Task'
-                    value={task}
-                    onChange={inputField}/>
-                <ButtonPriority color={'currentColor'} onClick={()=> checkPriority()}/>
+        <form>
+            <div className='form'>
+                    <Input
+                        type="text" 
+                        placeholder='Add Task'
+                        value={task}
+                        onChange={inputField}/>
+                <ButtonPriority color={'currentColor'} 
+                    onClick={()=> checkPriority()}/>
+                <Button
+                    className={"button button-add"}
+                    label={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="icons">
+                                <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+                            </svg>
+                        }
+                    type='Submit'
+                    onClick={createTodo}/>
             </div>
-            <Button 
-                label={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
-                            <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
-                        </svg>
-                    }
-                type='Submit'
-                onClick={createTodo}/>
         </form>           
     )
 }
