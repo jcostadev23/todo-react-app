@@ -1,0 +1,22 @@
+
+.todos {
+    margin: 8px;
+    padding: 8px;
+}
+
+.todo {
+    display: flex;
+    align-items: flex-start;
+}
+
+.todo-done {
+    color: #cbd5e0;
+}
+
+.todo-notDone {
+    color: #a0aec0;
+}
+
+.date {
+    margin-left: 10px;
+}

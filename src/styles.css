@@ -11,39 +11,6 @@
     margin: 10px;
 }
 
-.input {
-    flex-grow: 1;
-    box-shadow: 0 1px 3px 0 rgba(28, 28, 28, 0.1);
-    border-radius: 6px;
-    width: 100%;
-    padding: 12px;
-    font-size: 14px;
-    border: groove;
-  }
-
-.button {
-    font-size: 14px;
-    border-radius: 4px;
-    padding: 10px 12px;
-    background-color:  #9ae6b4;
-    border: none;
-  }
-  
-.button:hover {
-    background-color:  #68d391; 
-  }
-
-.button-add { 
-    font-size: 6px;
-    padding: 8px 10px;
-    border-radius: 50%;
-}
-
-.button-signOut {
-    display: flex;
-    justify-content: center;
-}
-  
 .header {
     margin-top: 10px;
     text-align:center ;
@@ -52,54 +19,19 @@
     font-weight: 700;
 }
 
-.todos {
-    margin: 8px;
-    padding: 8px;
-}
-
-.todo {
+.listTodos{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    width: 100%;
 }
 
-.todo-done {
-    color: #cbd5e0;
-}
-
-.todo-notDone {
-    color: #a0aec0;
-}
-
-.date {
-    margin-left: 10px;
-}
-
-.icons {
-    flex-shrink: 0;
-    width: 22px;
-    height: 22px;
-    margin: 4px;
-}
-
-.icons:hover{
-    stroke:black;
-}
-
-.listTodos {
+.listTodosDone {
     display: flex;
-    justify-content: space-between;
     color:#a0aec0;
-    margin: 4px;
     gap: 10px;
     font-weight: 700;
 }
 
-.listTodos:hover{
+.listTodosDone:hover{
     color:black;
-}
-
-.list{
-    display: grid;
-    justify-content: center;
 }

@@ -1,6 +1,6 @@
 import { ButtonDone, ButtonPriority, ButtonDelete } from './Button';
 import { handleTodo, deleteTodo, handlePriority } from '../helpers/editTodos';
-import '../styles.css';
+import './todos.css';
 
 export function Todos ({listTodos}){
     const list = [...listTodos]

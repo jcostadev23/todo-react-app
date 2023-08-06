@@ -1,5 +1,5 @@
 import * as React from "react";
-import '../styles.css'
+import './input.css'
 
 export function Input(props) {
   const { placeholder, onChange, value, type } = props;

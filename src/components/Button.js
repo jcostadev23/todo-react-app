@@ -1,4 +1,5 @@
 import * as React from "react";
+import './button.css'
 
 export function Button(props) {
   const {label, type, className, onClick} = props
