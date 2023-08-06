@@ -8,25 +8,27 @@
 .form {
     display: flex;
     align-items: center;
-    gap:10px
+    gap: 8px;
+    margin: 10px;
 }
 
 .input {
     flex-grow: 1;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px 0 rgba(28, 28, 28, 0.1);
     border-radius: 6px;
     width: 100%;
     padding: 12px;
     font-size: 14px;
-    margin: 4px;
     background-color: whitesmoke;
+    border: groove;
   }
 
 .button {
     font-size: 14px;
     border-radius: 4px;
-    padding: 8px 10px;
+    padding: 10px 12px;
     background-color:  #9ae6b4;
+    border: none;
   }
   
 .button:hover {
@@ -34,10 +36,18 @@
   }
 
 .button-add { 
+    font-size: 6px;
+    padding: 8px 10px;
     border-radius: 50%;
+}
+
+.button-signOut {
+    display: flex;
+    justify-content: center;
 }
   
 .header {
+    margin-top: 10px;
     text-align:center ;
     font-size: 30px;
     color: rgb(155, 246, 144);  
@@ -51,9 +61,9 @@
 
 .todo {
     display: flex;
-    justify-content: flex-start;
+    align-items: center;
     width: 100%;
-    margin-top: 6px;
+    margin: 10px;
 }
 
 .todo-done {
@@ -70,13 +80,24 @@
 
 .icons {
     flex-shrink: 0;
-    width: 20px;
-    height: 20px;
-    margin: 2px;
+    width: 22px;
+    height: 22px;
+    margin: 4px;
+}
+
+.icons:hover{
+    stroke:black;
 }
 
 .listTodos {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    color:#a0aec0;
     margin: 4px;
+    gap: 10px;
+    font-weight: 700;
+}
+
+.listTodos:hover{
+    color:black;
 }
