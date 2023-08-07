@@ -47,7 +47,7 @@ export function ButtonDelete (props){
 export function ShowTodosDone (props){
   const {d, onClick} = props
   return (
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="grey" className="icons"
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#4f5050" className="icons iconlistTodosDone"
         onClick={onClick}>
         <path strokeLinecap="round" strokeLinejoin="round" d={d} />
       </svg>

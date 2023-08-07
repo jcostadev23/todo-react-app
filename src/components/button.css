@@ -40,3 +40,7 @@
 .icondelete:hover {
     stroke: #c40606;
 }
+
+.iconlistTodosDone:hover {
+    stroke: #858f9e
+}
