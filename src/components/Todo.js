@@ -13,7 +13,7 @@ export function Todos ({listTodos}){
                         <ButtonDone color={todo.done ? 'green' : 'currentColor'} onClick={(()=> handleTodo(todo))}/>
                         <ButtonPriority color={todo.priority ? 'orange' : 'currentColor'} onClick={(()=>handlePriority(todo))}/>
                         {todo.done && <ButtonDelete color={'currentColor'} onClick={()=> deleteTodo(todo.id)}/>}
-                        Task: {todo.task}
+                        {todo.task}
                         <span className='date'>{new Date(todo.date).toLocaleDateString()} {/* Format Date to "MM/DD/YYYY" */}</span>
                     </div> 
                 </div>  
