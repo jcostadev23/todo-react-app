@@ -2,6 +2,7 @@ import { Authenticator } from "@aws-amplify/ui-react";
 import { Button } from "./Button";
 import { PremiumTodos } from "./PremiumTodos";
 import { DataStore } from "aws-amplify";
+import '@aws-amplify/ui-react/styles.css';
 import '../styles.css';
 
 const Premium = ()=> {

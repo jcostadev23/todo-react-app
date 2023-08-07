@@ -29,6 +29,14 @@
     margin: 4px;
 }
 
-.icons:hover{
-    stroke:black;
+.iconpriority:hover{
+    stroke:#f7805c;
+}
+
+.icondone:hover {
+    stroke: #35d138;
+}
+
+.icondelete:hover {
+    stroke: #c40606;
 }
