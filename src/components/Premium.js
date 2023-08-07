@@ -1,4 +1,4 @@
-import { Authenticator } from "@aws-amplify/ui-react";
+import { Authenticator, withAuthenticator } from "@aws-amplify/ui-react";
 import { Button } from "./Button";
 import { PremiumTodos } from "./PremiumTodos";
 import { DataStore } from "aws-amplify";
@@ -6,6 +6,7 @@ import '@aws-amplify/ui-react/styles.css';
 import '../styles.css';
 
 const Premium = ()=> {
+    
     return (
         <Authenticator>
             {({signOut})=> (
@@ -13,15 +14,15 @@ const Premium = ()=> {
                     <PremiumTodos/>
                     <div className="button-signOut">
                         <Button 
-                            onClick={()=>{
-                            DataStore.clear()
-                            signOut()
+                            onClick={()=> {
+                                DataStore.clear()
+                                signOut()
                             }}
                             label='SignOut'/>
                     </div>
-                </div>  
+                </div> 
             )}
         </Authenticator>
     )
 };
-export default Premium;
+export default withAuthenticator(Premium);
