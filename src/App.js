@@ -6,13 +6,11 @@ import './styles.css';
 
 function App() {
   return (
-    <div>
       <Router>
         <Routes>
           <Route path='/' element={<PremiumTodos/>}/>
         </Routes> 
       </Router>   
-    </div>  
   );
 }
 

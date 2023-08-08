@@ -2,7 +2,7 @@
 .button {
     font-size: 14px;
     border-radius: 4px;
-    padding: 10px 12px;
+    padding: 8px 20px;
     background-color:  #9ae6b4;
     border: none;
   }
@@ -18,6 +18,7 @@
 }
 
 .button-signOut {
+    margin-top: 12px;
     display: flex;
     justify-content: center;
 }
@@ -26,7 +27,7 @@
     flex-shrink: 0;
     width: 22px;
     height: 22px;
-    margin: 4px;
+    margin: 6px;
 }
 
 .iconpriority:hover{
@@ -39,8 +40,4 @@
 
 .icondelete:hover {
     stroke: #c40606;
-}
-
-.iconlistTodosDone:hover {
-    stroke: #858f9e
 }

@@ -1,12 +1,8 @@
 
-.todos {
-    margin: 8px;
-    padding: 8px;
-}
-
 .todo {
     display: flex;
-    margin: 6px
+    align-items: center;
+    margin-top: 6px;
 }
 
 .todo-done {
@@ -15,8 +11,4 @@
 
 .todo-notDone {
     color: #4f5050;
-}
-
-.date {
-    margin-left: 10px;
 }
