@@ -9,6 +9,7 @@
   
 .button:hover {
     background-color:  #68d391; 
+    cursor: pointer;
   }
 
 .button-add { 
@@ -27,17 +28,20 @@
     flex-shrink: 0;
     width: 22px;
     height: 22px;
-    margin: 6px;
+
 }
 
 .iconpriority:hover{
     stroke:#f7805c;
+    cursor: pointer;
 }
 
 .icondone:hover {
     stroke: #35d138;
+    cursor: pointer;
 }
 
 .icondelete:hover {
-    stroke: #c40606;
+    stroke: #fc3034;
+    cursor: pointer;
 }

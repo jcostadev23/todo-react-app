@@ -3,10 +3,11 @@
     display: flex;
     align-items: center;
     margin-top: 6px;
+    gap: 8px;
 }
 
 .todo-done {
-    color: #cbd5e0;
+    color: #a0a3a3;;
 }
 
 .todo-notDone {

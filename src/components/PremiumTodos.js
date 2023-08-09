@@ -26,9 +26,7 @@ export function PremiumTodos (){
         <div className='card'>
             <div className='header'>Todoco</div>
                 <TodosInput listTodos={listTodos}/>
-                <div className='listTodos'>
-                    <Todos listTodos={sortTodos(listTodos.filter((todo)=> !todo.done ))}/>
-                </div> 
+                <Todos listTodos={sortTodos(listTodos.filter((todo)=> !todo.done ))}/>
                 <div className='listTodosDone' onClick={displayTodosDone}>Completed ( {filterTodos(listTodos).length} )
                     {filterTodos(listTodos).length !== 0 ? <ShowTodosDone className='iconShowTodosDone' d={showTodosDone ? "M3 4.5h14.25M3 9h9.75M3 13.5h5.25m5.25-.75L17.25 9m0 0L21 12.75M17.25 9v12" :
                         "M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0l-3.75-3.75M17.25 21L21 17.25"}

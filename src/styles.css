@@ -1,38 +1,27 @@
 
-body {
-    display: flex;
-    justify-content: center;
-}
 .card {
-    width: 600px;
-    border-radius: 8px;
+    padding: 20px;
 }
 
 .form {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 .header {
-    margin-top: 8px;
     text-align:center ;
     font-size: 50px;
-    color: rgb(155, 246, 144);  
+    color: #9ae6b4;  
     font-weight: 700;
-}
-
-.listTodos{
-    display: flex;
-    flex-direction: column;
 }
 
 .listTodosDone {
     display: flex;
     justify-content: space-between;
     color:#4f5050;
-    gap: 10px;
+    margin-top: 10px;
     font-weight: 700;
     align-items: center;
 }
@@ -43,12 +32,14 @@ body {
 
 .listTodosDone:hover{
     color:#858f9e;
+    cursor: pointer;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .card{
-        width: 320px;
+        padding: 10px;
     }
+   
     .header{
         font-size: 30px;
     }
