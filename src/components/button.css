@@ -3,12 +3,13 @@
     font-size: 14px;
     border-radius: 4px;
     padding: 8px 20px;
-    background-color:  #9ae6b4;
-    border: none;
+    background-color: white;
+    font-weight: 500;
+
   }
   
 .button:hover {
-    background-color:  #68d391; 
+    background-color: whitesmoke; 
     cursor: pointer;
   }
 
@@ -16,7 +17,13 @@
     font-size: 6px;
     padding: 8px 10px;
     border-radius: 50%;
+    background-color:  #9ae6b4;
+    border:none
 }
+.button-add:hover {
+    background-color:  #68d391; 
+    cursor: pointer;
+  }
 
 .button-signOut {
     margin-top: 12px;

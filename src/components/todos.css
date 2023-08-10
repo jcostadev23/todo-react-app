@@ -2,8 +2,8 @@
 .todo {
     display: flex;
     align-items: center;
-    margin-top: 6px;
-    gap: 8px;
+    margin-bottom: 10px;
+    gap: 10px;
 }
 
 .todo-done {
