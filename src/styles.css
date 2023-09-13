@@ -42,7 +42,9 @@
     .card{
         padding: 10px;
     }
-   
+    .form{
+        flex-direction: column;
+    }
     .header{
         font-size: 30px;
     }
