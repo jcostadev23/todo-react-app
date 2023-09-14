@@ -1,10 +1,19 @@
-
 .input {
-    flex-grow: 1;
-    box-shadow: 0 1px 3px 0 rgba(28, 28, 28, 0.1);
-    border-radius: 6px;
-    padding: 12px;
+  box-shadow: 0 1px 3px 0 rgba(28, 28, 28, 0.1);
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+}
+
+.input-grow {
+  flex-grow: 1;
+}
+@media (max-width: 500px){
+  .input{
+    width: 100%;
     font-size: 14px;
-    border: none;
-    outline: none;
-  }
+    padding: 8px;
+}
+}

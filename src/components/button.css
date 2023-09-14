@@ -52,3 +52,9 @@
     stroke: #fc3034;
     cursor: pointer;
 }
+@media (max-width: 500px){
+    .button-add { 
+        font-size: 6px;
+        padding: 2px 4px;
+    }
+}

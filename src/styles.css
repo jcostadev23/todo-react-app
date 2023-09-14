@@ -48,14 +48,4 @@
     .header{
         font-size: 30px;
     }
-    .input{
-        width: 100%;
-        max-width: 400px;
-        font-size: 14px;
-        padding: 8px;
-    }
-    .button-add { 
-        font-size: 6px;
-        padding: 2px 4px;
-    }
 }
