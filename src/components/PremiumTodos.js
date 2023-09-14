@@ -44,7 +44,6 @@ export function PremiumTodos() {
                             signOut();
                         }}
                         label='Sign out' />
-                    <div>{user.attributes.email}</div>
                 </div>
                 }
 
