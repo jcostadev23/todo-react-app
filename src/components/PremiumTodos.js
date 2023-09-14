@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { filterTodos, sortTodos } from '../helpers/editTodos';
 import { TodosInput } from './TodoInput';
 import { Todos } from './Todo';
-import { Auth, DataStore } from 'aws-amplify';
+import { DataStore } from 'aws-amplify';
 import { Todo } from '../models';
 import { Button, ShowTodosDone } from './Button';
 import '../styles.css';
@@ -15,10 +15,9 @@ export function PremiumTodos() {
     const [listTodos, setListTodos] = useState([]);
     const [showTodosDone, setShowTodosDone] = useState(null);
     useEffect(() => {
-        const subscription = DataStore.observeQuery(Todo).subscribe(msg => {
+        DataStore.observeQuery(Todo).subscribe(msg => {
             setListTodos(msg.items);
         });
-
     }, []);
 
     const displayTodosDone = () => {
