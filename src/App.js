@@ -1,22 +1,17 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { PremiumTodos } from './components/PremiumTodos';
-import  Premium  from './components/Premium'
-import { Button } from "./components/Button";
+import Login from './components/Login';
 
 function App() {
 
   return (
-      <Router>
-        <Routes>
-          <Route path='/' element={<PremiumTodos/>}/>
-          <Route path='/Premium' element={<Premium/>}/>
-        </Routes> 
-        <Link to='/premium'>
-            <Button
-              label='SignIn'/>
-          </Link>
-      </Router>   
+    <Router>
+      <Routes>
+        <Route path='/' element={<PremiumTodos />} />
+        <Route path='/login' element={<Login />} />
+      </Routes>
+    </Router>
   );
 }
 
