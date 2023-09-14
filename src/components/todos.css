@@ -13,3 +13,17 @@
 .todo-notDone {
     color: #4f5050;
 }
+.mobile-form{
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+.display-date{
+    font-size: .8rem;
+    font-weight: bold;
+}
+@media (max-width: 500px) {
+    .mobile-form{
+        width: 100%;
+    }  
+}
