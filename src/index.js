@@ -14,6 +14,9 @@ const listener = async (data) => {
     case 'signOut':
       window.location.reload();
       break;
+    case 'signIn':
+      window.location.reload();
+      break;
     default:
   }
 };
