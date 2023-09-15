@@ -32,7 +32,7 @@ async function deleteTodo (id) {
 
 function sortTodosWithPriority(listTodos){
     const list = [...listTodos]
-    list.sort((a, b)=> b.priority - a.priority)
+    list.sort((a, b)=> b.priority - a.priority || (a.date && b.date ? a.date.localeCompare(b.date) : 0))
     return list
 }
 

@@ -24,16 +24,16 @@ export function PremiumTodos() {
         setShowTodosDone(!showTodosDone)
     }
 
-    const todosWithPriority = sortTodosWithPriority(listTodos.filter((todo) => !todo.done))
-    const todosDone = filterTodosDone(listTodos)
+    const sortedTodos = sortTodosWithPriority(listTodos.filter((todo) => !todo.done))
+    const filterDoneTodos = filterTodosDone(listTodos)
 
     return (
         <div className='card'>
             <div className='header'>Todoco</div>
             <TodosInput listTodos={listTodos} />
-            <Todos listTodos={todosWithPriority} />
-            <TodosDone onClick={displayTodosDone} showTodosDone={showTodosDone} todosDone={todosDone} />
-            {showTodosDone && <Todos listTodos={todosDone} />}
+            <Todos listTodos={sortedTodos} />
+            <TodosDone onClick={displayTodosDone} showTodosDone={showTodosDone} filterDoneTodos={filterDoneTodos} />
+            {showTodosDone && <Todos listTodos={filterDoneTodos} />}
             <div>
                 {user && <div>
                     <Button

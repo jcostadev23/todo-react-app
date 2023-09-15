@@ -23,10 +23,10 @@ export function Todos({ listTodos }) {
 }
 
 export function TodosDone(props) {
-    const { showTodosDone, onClick, todosDone } = props
+    const { showTodosDone, onClick, filterDoneTodos } = props
     return (
-        <div className='listTodosDone' onClick={onClick}>Completed ({todosDone.length})
-            {todosDone.length !== 0 ? <ShowTodosDone showTodosDone={showTodosDone}
+        <div className='listTodosDone' onClick={onClick}>Completed ({filterDoneTodos.length})
+            {filterDoneTodos.length !== 0 ? <ShowTodosDone showTodosDone={showTodosDone}
                 onClick={onClick} /> : ""}
         </div>
     )
