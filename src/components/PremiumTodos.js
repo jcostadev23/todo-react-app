@@ -4,10 +4,9 @@ import { TodosInput } from './TodoInput';
 import { Todos, TodosDone } from './Todo';
 import { DataStore } from 'aws-amplify';
 import { Todo } from '../models';
-import { Button } from './Button';
 import '../styles.css';
 import { useAuthenticator } from '@aws-amplify/ui-react';
-import { LoginAdvantages } from './information';
+import { LoginAdvantages, SignoutMessage } from './information';
 
 export function PremiumTodos() {
     const { user, signOut } = useAuthenticator((context) => [context.user]);
@@ -35,15 +34,7 @@ export function PremiumTodos() {
             <TodosDone onClick={displayTodosDone} showTodosDone={showTodosDone} filterDoneTodos={filterDoneTodos} />
             {showTodosDone && <Todos listTodos={filterDoneTodos} />}
             <div>
-                {user && <div>
-                    <Button
-                        onClick={async () => {
-                            await DataStore.clear();
-                            signOut();
-                        }}
-                        label='Sign out' />
-                </div>
-                }
+                {user && <SignoutMessage signOut={signOut} />}
                 {!user && <LoginAdvantages />}
             </div>
         </div>
