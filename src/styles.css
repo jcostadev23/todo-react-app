@@ -28,11 +28,6 @@
     font-weight: 700;
     align-items: center;
 }
-
-.iconShowTodosDone {
-    margin-left: auto;
-}
-
 .listTodosDone:hover{
     color:#858f9e;
     cursor: pointer;
