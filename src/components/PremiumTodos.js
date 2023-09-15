@@ -6,8 +6,8 @@ import { DataStore } from 'aws-amplify';
 import { Todo } from '../models';
 import { Button } from './Button';
 import '../styles.css';
-import { Link } from 'react-router-dom';
 import { useAuthenticator } from '@aws-amplify/ui-react';
+import { LoginAdvantages } from './information';
 
 export function PremiumTodos() {
     const { user, signOut } = useAuthenticator((context) => [context.user]);
@@ -44,19 +44,7 @@ export function PremiumTodos() {
                         label='Sign out' />
                 </div>
                 }
-
-                {!user &&
-                    <div>
-                        <h2>
-                            Want to save your todocos online?
-                        </h2>
-                        <p>
-                            Saving your tocodos online makes it possible to access them from
-                            anywhere with any device.
-                        </p>
-                        <Link to="/login"><Button label='SignIn' /></Link>
-                    </div>
-                }
+                {!user && <LoginAdvantages />}
             </div>
         </div>
     )
