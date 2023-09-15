@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { filterTodosDone, sortTodosWithPriority } from '../helpers/editTodos';
+import { filterTodosDone, sortTodos } from '../helpers/editTodos';
 import { TodosInput } from './TodoInput';
 import { Todos, TodosDone } from './Todo';
 import { DataStore } from 'aws-amplify';
@@ -24,7 +24,7 @@ export function PremiumTodos() {
         setShowTodosDone(!showTodosDone)
     }
 
-    const sortedTodos = sortTodosWithPriority(listTodos.filter((todo) => !todo.done))
+    const sortedTodos = sortTodos(listTodos.filter((todo) => !todo.done))
     const filterDoneTodos = filterTodosDone(listTodos)
 
     return (

@@ -30,9 +30,9 @@ async function deleteTodo (id) {
         }
 }
 
-function sortTodosWithPriority(listTodos){
+function sortTodos(listTodos){
     const list = [...listTodos]
-    list.sort((a, b)=> b.priority - a.priority || (a.date && b.date ? a.date.localeCompare(b.date) : 0))
+    list.sort((a, b)=> b.priority - a.priority || (a.date && b.date ? a.date.localeCompare(b.date) : (a.date ? -1 : (b.date ? 1 : 0))))
     return list
 }
 
@@ -40,4 +40,4 @@ function filterTodosDone(listTodos){
     return listTodos.filter((todo)=> todo.done )
 }
 
-export { handleTodo, deleteTodo, sortTodosWithPriority, filterTodosDone, handlePriority }
+export { handleTodo, deleteTodo, sortTodos, filterTodosDone, handlePriority,  }
