@@ -30,14 +30,14 @@ async function deleteTodo (id) {
         }
 }
 
-function sortTodos(listTodos){
+function sortTodosWithPriority(listTodos){
     const list = [...listTodos]
     list.sort((a, b)=> b.priority - a.priority)
     return list
 }
 
-function filterTodos(listTodos){
+function filterTodosDone(listTodos){
     return listTodos.filter((todo)=> todo.done )
 }
 
-export { handleTodo, deleteTodo, sortTodos, filterTodos, handlePriority }
+export { handleTodo, deleteTodo, sortTodosWithPriority, filterTodosDone, handlePriority }
