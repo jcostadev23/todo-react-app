@@ -7,9 +7,10 @@ import { Todo } from '../models';
 import '../styles.css';
 import "./todos.css";
 import { useAuthenticator } from '@aws-amplify/ui-react';
-import { LoginAdvantages, SignoutMessage } from './information';
+import { LoginAdvantages } from './LoginAdvantages';
+import { SignoutMessage } from './SignOutMessage';
 
-export function PremiumTodos() {
+export function Todocos() {
     const { user, signOut } = useAuthenticator((context) => [context.user]);
 
     const [listTodos, setListTodos] = useState([]);

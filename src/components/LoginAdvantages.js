@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { Button } from './Button';
-import { DataStore } from 'aws-amplify';
 
 export function LoginAdvantages() {
     return (
@@ -17,15 +16,3 @@ export function LoginAdvantages() {
     )
 }
 
-export function SignoutMessage({ signOut }) {
-    return (
-        <div>
-            <Button
-                onClick={async () => {
-                    await DataStore.clear();
-                    signOut();
-                }}
-                label='Sign out' />
-        </div>
-    )
-}
