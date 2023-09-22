@@ -30,6 +30,13 @@
     display: flex;
     justify-content: center;
 }
+.iconButton{
+    display: flex;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
 
 .icons {
     flex-shrink: 0;

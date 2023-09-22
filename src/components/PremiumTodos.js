@@ -5,6 +5,7 @@ import { Todos, TodosDone } from './Todo';
 import { DataStore } from 'aws-amplify';
 import { Todo } from '../models';
 import '../styles.css';
+import "./todos.css";
 import { useAuthenticator } from '@aws-amplify/ui-react';
 import { LoginAdvantages, SignoutMessage } from './information';
 

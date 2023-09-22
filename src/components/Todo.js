@@ -1,6 +1,6 @@
-import { ButtonDone, ButtonPriority, ButtonDelete, ShowTodosDone } from './Button';
+import { Button } from './Button';
 import { handleTodo, deleteTodo, handlePriority } from '../helpers/editTodos';
-import './todos.css';
+import { IconDone, IconPriority, IconDelete, OpenIcon, CloseIcon } from "./svg";
 import { format } from 'date-fns';
 
 export function Todos({ listTodos }) {
@@ -11,9 +11,9 @@ export function Todos({ listTodos }) {
             {list.map((todo) => (
                 <div key={todo.id}>
                     <div className={todo.done ? 'todo todo-done' : "todo todo-notDone"}>
-                        <ButtonDone color={todo.done ? 'green' : 'currentColor'} onClick={(() => handleTodo(todo))} />
-                        {!todo.done && <ButtonPriority color={todo.priority ? 'orange' : 'currentColor'} onClick={(() => handlePriority(todo))} />}
-                        {todo.done && <ButtonDelete color={'currentColor'} onClick={() => deleteTodo(todo.id)} />}
+                        <Button className="iconButton" onClick={(() => handleTodo(todo))} label={<IconDone color={todo.done ? 'green' : 'currentColor'}/>}/>
+                        {!todo.done && <Button className="iconButton" onClick={(() => handlePriority(todo))} label={<IconPriority color={todo.priority ? 'orange' : 'currentColor'}/>}/>}
+                        {todo.done && <Button className="iconButton" onClick={() => deleteTodo(todo.id)} label={<IconDelete color={'currentColor'}/>}/>}
                         <div>{todo.task} {todo.date && <span className="display-date"> {format(new Date(todo.date), 'dd MMM')}</span>}</div>
                     </div>
                 </div>
@@ -26,8 +26,7 @@ export function TodosDone(props) {
     const { showTodosDone, onClick, filterDoneTodos } = props
     return (
         <div className='listTodosDone' onClick={onClick}>Completed ({filterDoneTodos.length})
-            {filterDoneTodos.length !== 0 ? <ShowTodosDone showTodosDone={showTodosDone}
-                onClick={onClick} /> : ""}
+            {filterDoneTodos.length !== 0 ? <Button className="iconButton" label={showTodosDone ? <OpenIcon/> : <CloseIcon/>}/> : ""}
         </div>
     )
 }
